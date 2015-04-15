@@ -30,8 +30,9 @@ namespace SharpCompress.Common
         {
             if (!completed)
             {
-                throw new InvalidOperationException(
-                    "EntryStream has not been fully consumed.  Read the entire stream or use SkipEntry.");
+            // Commented because this causes problems with exceptions thrown on progress events
+            //     throw new InvalidOperationException(
+            //         "EntryStream has not been fully consumed.  Read the entire stream or use SkipEntry.");
             }
             if (isDisposed)
             {
